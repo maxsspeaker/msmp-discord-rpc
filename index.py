@@ -22,7 +22,7 @@ class DiscordRpc(PluginBase):
         self.main_window.events.on_sync_position.connect(self.discordrpc.sync_position)
         self.main_window.events.on_play_status_changed.connect(self.discordrpc.set_playback_status)
 
-        #self.main_window.events.on_app_closing.connect(self.cleanup)
+        self.main_window.events.on_app_closing.connect(self.cleanup)
 
     def toggle(self):
         pass
