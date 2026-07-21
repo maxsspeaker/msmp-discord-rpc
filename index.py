@@ -13,9 +13,9 @@ class DiscordRpc(PluginBase):
 
         self.discordrpc = discordrpcWrapper(self.main_window)
 
-        self.StarFildMenu=self.main_window.MainMenuBar.add_submenu(self.main_window.PlguinMenu, "DiscordRpc", hide_if_empty=False)
+        self.DiscordRPCMenu=self.main_window.MainMenuBar.add_submenu(self.main_window.PlguinMenu, "DiscordRpc", hide_if_empty=False)
 
-        #self.StarFildMenu.addAction("Toggle AudioFox", self.toggle)
+        #self.DiscordRPCMenu.addAction("Toggle DiscordRPC", self.toggle)
 
 
         self.main_window.events.on_update_current_metadata.connect(self.discordrpc.set_activity)
