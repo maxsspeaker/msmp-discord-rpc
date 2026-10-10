@@ -1,0 +1,7 @@
+{
+    "Name":"Discord Rich Presence",
+    "Description":"Discord Rich Presence for MSMP FoxWave",
+    "Author":"Maxsspeaker",
+    "Id":"space.maxsspeaker.wave.discordrpc",
+    "dependencies":[]
+}
