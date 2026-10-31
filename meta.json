@@ -3,5 +3,6 @@
     "Description":"Discord Rich Presence for MSMP FoxWave",
     "Author":"Maxsspeaker",
     "Id":"space.maxsspeaker.wave.discordrpc",
-    "dependencies":[]
+    "dependencies":[],
+    "compatibleWith":[">","6.2.x","6.1.x"]
 }

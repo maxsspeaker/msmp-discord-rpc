@@ -62,7 +62,7 @@ class discordrpcWrapper:
                     large_image=self.itemSelected.artwork_url or "msmpwave",
                     small_image="streaming" if is_broadcasting else self.Status.lower(),
                     small_text="broadcasting" if is_broadcasting else self.Status,
-                    large_text=self.itemSelected.album or self.MainWindow.playlist_title or None
+                    large_text=self.itemSelected.album or self.MainWindow.playlistManager.playlist_title or None
                     )
             except:
                 traceback.print_exc()
@@ -100,7 +100,7 @@ class discordrpcWrapper:
                     large_image=self.itemSelected.artwork_url or "msmpwave",
                     small_image="streaming" if is_broadcasting else self.Status.lower(),
                     small_text="broadcasting" if is_broadcasting else self.Status,
-                    large_text=self.itemSelected.album or self.MainWindow.playlist_title or None
+                    large_text=self.itemSelected.album or self.MainWindow.playlistManager.playlist_title or None
                     )
             except:
                 traceback.print_exc()
@@ -126,7 +126,7 @@ class discordrpcWrapper:
                     large_image=self.itemSelected.artwork_url or "msmpwave",
                     small_image="streaming" if is_broadcasting else self.Status.lower(),
                     small_text="broadcasting" if is_broadcasting else self.Status,
-                    large_text=self.itemSelected.album or self.MainWindow.playlist_title or None
+                    large_text=self.itemSelected.album or self.MainWindow.playlistManager.playlist_title or None
                     )
             except:
                 traceback.print_exc()

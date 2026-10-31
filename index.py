@@ -13,7 +13,7 @@ class DiscordRpc(PluginBase):
 
         self.discordrpc = discordrpcWrapper(self.main_window)
 
-        self.DiscordRPCMenu=self.main_window.MainMenuBar.add_submenu(self.main_window.PlguinMenu, "DiscordRpc", hide_if_empty=False)
+        self.DiscordRPCMenu=self.main_window.MainMenuBar.add_submenu(self.main_window.PluginMenu, "DiscordRpc", hide_if_empty=False)
 
         #self.DiscordRPCMenu.addAction("Toggle DiscordRPC", self.toggle)
 
