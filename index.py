@@ -40,7 +40,7 @@ class DiscordRpc(PluginBase):
         self.main_window.events.on_play_status_changed.connect(self.set_status)
 
         self.reconnectTimer = QTimer(self.main_window)
-        self.reconnectTimer.setInterval(5000) 
+        self.reconnectTimer.setInterval(360000) 
         self.reconnectTimer.timeout.connect(self.reconnect_activity)
 
         self.discordrpcEnabled=self.config["discordrpcEnabled"]
@@ -88,6 +88,8 @@ class DiscordRpc(PluginBase):
             except SystemExit:
                 self.rpc=None
                 self.reconnectTimer.start()
+            except NoneType:
+                self.reconnectTimer.start()
             self.timer.stop()
 
     def toggle(self):
@@ -98,6 +100,8 @@ class DiscordRpc(PluginBase):
                 self.rpc.clear()
             except SystemExit:
                 self.rpc=None
+            except NoneType:
+                self.reconnectTimer.start()
             self.timer.stop()
         else:
             self.timer.start()
@@ -105,8 +109,8 @@ class DiscordRpc(PluginBase):
                 self.reconnectTimer.start()
 
     def give_queue_activity(self,item):
+        self.statusBuffer=item
         if self.discordrpcEnabled:
-            self.statusBuffer=item
             self.statusNeedChange=True
 
     def give_queue_time(self,position_ms: int):
